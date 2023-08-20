@@ -1,8 +1,8 @@
 import { ThemeProvider } from "@emotion/react";
-import Catalog from "../../features/catalog/Catalog";
 import Header from "./Header";
 import { Container, CssBaseline, createTheme } from "@mui/material";
 import { useState } from "react";
+import { Outlet } from "@mui/icons-material";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -25,7 +25,7 @@ function App() {
       <CssBaseline />
       <Header darkMode={darkMode} handleThemeChange={handleThemeChange} />
       <Container>
-        <Catalog />
+        <Outlet />
       </Container>
     </ThemeProvider>
   );
