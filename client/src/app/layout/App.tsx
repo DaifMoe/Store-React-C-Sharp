@@ -2,7 +2,7 @@ import { ThemeProvider } from "@emotion/react";
 import Header from "./Header";
 import { Container, CssBaseline, createTheme } from "@mui/material";
 import { useState } from "react";
-import { Outlet } from "@mui/icons-material";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
