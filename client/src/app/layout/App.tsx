@@ -5,7 +5,9 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
   const paletteType = darkMode ? "dark" : "light";
   const theme = createTheme({
     palette: {
